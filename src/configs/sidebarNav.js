@@ -6,16 +6,16 @@ const sidebarNav = [
         text: 'Home'
     },
     {
-        link: '/orders',
-        section: 'orders',
-        icon: <i className='bx bx-receipt' ></i>,
-        text: 'Orders'
+        link: '/gifts',
+        section: 'gifts',
+        icon: <i className='bx bx-gift' ></i>,
+        text: 'Gifts'
     },
     {
-        link: '/products',
-        section: 'products',
+        link: '/courses',
+        section: 'courses',
         icon: <i className='bx bx-cube'></i>,
-        text: 'Products'
+        text: 'Courses'
     },
     {
         link: '/customers',
@@ -24,10 +24,10 @@ const sidebarNav = [
         text: 'Customers'
     },
     {
-        link: '/stats',
-        section: 'stats',
+        link: '/wallets',
+        section: 'wallets',
         icon: <i className='bx bx-line-chart'></i>,
-        text: 'Stats'
+        text: 'Wallets'
     },
     {
         link: '/settings',

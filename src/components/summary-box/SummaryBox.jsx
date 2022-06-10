@@ -32,7 +32,7 @@ const SummaryBox = ({ item }) => {
                 <div className="summary-box__info">
                     <div className="summary-box__info__title">
                         <div>{item.title}</div>
-                        <span>{item.subtitle}</span>
+                        {/* <span>{item.subtitle}</span> */}
                     </div>
                     <div className="summary-box__info__value">
                         {item.value}
