@@ -12,13 +12,13 @@ const AddLession = () => {
    const [selectedOption, setSelectedOption] = useState(null);
    const [description, setDescription] = useState();
    const [numerical, setNumerical] = useState();
-   const [url, setUrl] = useState();
    const [video, setVideo] = useState();
    const [uploading, setUploading] = useState(false);
    useEffect(() => {
+      options.length=0
       axioscf.get('/course')
          .then((response) => {
-            response.data.map((item) => { options.push({ value: item.id, label: item.title }) })
+            response.data.map((item) => options.push({ value: item.id, label: item.title }) )
          })
          .catch((error) => console.log(error))
          .finally(() => setLoading(false))

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './sidebar.scss'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { images } from '../../constants'
 import sidebarNav from '../../configs/sidebarNav'
 
 const Sidebar = () => {
     const [activeIndex, setActiveIndex] = useState(0)
     const location = useLocation()
-
+    const navigate=useNavigate()
     useEffect(() => {
         const curPath = window.location.pathname.split('/')[1]
         const activeItem = sidebarNav.findIndex(item => item.section === curPath)
@@ -22,7 +22,10 @@ const Sidebar = () => {
             document.querySelector('.main__content').style = ''
         }, 500);
     }
-
+    const logout = () => {
+        window.localStorage.removeItem('token');
+        navigate('/login')
+    }
     return (
         <div className='sidebar'>
             <div className="sidebar__logo">
@@ -48,7 +51,7 @@ const Sidebar = () => {
                     <div className="sidebar__menu__item__icon">
                         <i className='bx bx-log-out'></i>
                     </div>
-                    <div className="sidebar__menu__item__txt">
+                    <div className="sidebar__menu__item__txt" onClick={logout}>
                         Logout
                     </div>
                 </div>
