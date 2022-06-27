@@ -4,4 +4,4 @@
 
 # DEMO
 
-[Video](https://res.cloudinary.com/vku-study-app/video/upload/v1656348947/20220627_232638_mu1ahg.mp4)
+[Video](https://user-images.githubusercontent.com/89791546/175996378-f2b48811-8a4c-4574-b8b8-e167b4f2dc48.mp4)
