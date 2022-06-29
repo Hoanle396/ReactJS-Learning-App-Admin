@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { ProductCard } from '../../components/course'
-import img from '../../assets/images/avt.jpg'
 import { useNavigate } from 'react-router-dom';
 import Loading from '../../components/Loadding';
 import axioscf from '../../axios.cf';

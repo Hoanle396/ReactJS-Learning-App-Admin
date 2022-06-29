@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './sidebar.scss'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { images } from '../../constants'
+import image from '../../assets/images/logo.svg'
 import sidebarNav from '../../configs/sidebarNav'
 
 const Sidebar = () => {
@@ -29,7 +29,7 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className="sidebar__logo">
-                <img src={images.logo} alt="" />
+                <img src={image} alt="" />
                 <div className="sidebar-close" onClick={closeSidebar}>
                     <i className='bx bx-x'></i>
                 </div>
@@ -49,7 +49,7 @@ const Sidebar = () => {
                 }
                 <div className="sidebar__menu__item">
                     <div className="sidebar__menu__item__icon">
-                        <i className='bx bx-log-out'></i>
+                    <i class="fa fa-power-off"></i>
                     </div>
                     <div className="sidebar__menu__item__txt" onClick={logout}>
                         Logout
