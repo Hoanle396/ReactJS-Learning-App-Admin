@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axioscf from '../../axios.cf';
+import { Button, TextField } from '@mui/material';
 const AddCourse = () => {
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
@@ -59,30 +60,30 @@ const AddCourse = () => {
           <form className="col-md-6">
             <div className="mb-3">
               <label for="Title" className="form-label">Tiltle</label>
-              <input type="text" value={title} onChange={(e) => { setTitle(e.target.value) }} className="form-control rounded" id="Title" />
+              <TextField type="text" value={title} onChange={(e) => { setTitle(e.target.value) }} className="form-control rounded" id="Title" />
             </div>
             <div className="mb-3">
               <label for="des" className="form-label">DesCription</label>
-              <input type="text" value={description} onChange={(e) => { setDescription(e.target.value) }} className="form-control rounded" id="des" />
+              <TextField type="text" value={description} onChange={(e) => { setDescription(e.target.value) }} className="form-control rounded" id="des" />
             </div>
             <div className="mb-3">
               <label for="dis" className="form-label">Discount</label>
-              <input type="text" value={discount} onChange={(e) => { setDiscount(e.target.value) }} className="form-control rounded" id="dis" />
+              <TextField type="text" value={discount} onChange={(e) => { setDiscount(e.target.value) }} className="form-control rounded" id="dis" />
             </div>
             <div className="mb-3">
               <label for="color" className="form-label">Background Color</label>
-              <input type="color" value={background} onChange={(e) => { setBackground(e.target.value) }} className="form-control rounded" id="color" />
+              <TextField type="color" value={background} onChange={(e) => { setBackground(e.target.value) }} className="form-control rounded" id="color" />
             </div>
             <div className="mb-3">
               <label for="img" className="form-label">Image Icon</label>
-              <input type="file" onChange={onImageChange} className="form-control rounded" id="img" />
+              <TextField type="file" onChange={onImageChange} className="form-control rounded" id="img" />
             </div>
             <div className="mb-3">
               {image && <img width="220"
                 height="320"
                 src={image} alt="..." />}
             </div>
-            <button type="button" onClick={handleSubmit} className="btn btn-primary">Submit</button>
+            <Button type="button" onClick={handleSubmit} variant='contained' size='large'>Submit</Button>
           </form>
         </div>
       </div>

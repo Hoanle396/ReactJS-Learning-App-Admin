@@ -22,7 +22,7 @@ const App = ({ auth, doLogin }) => {
                     <Route path="courses" element={<PrivateRoute auth={auth} component={<Course />}/>} />
                     <Route path="courses/:id" element={<PrivateRoute auth={auth} component={<CourseDetail />}/>} />
                     <Route path="courses/edit/:id" element={<PrivateRoute auth={auth} component={<AddCourse />}/>} />
-                    <Route path="course/lession/new" element={<PrivateRoute auth={auth} component={<AddLession />}/>} />
+                    <Route path="course/lession/new/:id" element={<PrivateRoute auth={auth} component={<AddLession />} />} />
                     <Route path="courses/add" element={<PrivateRoute auth={auth} component={<AddCourse />}/>} />
                     <Route path="customers" element={<PrivateRoute auth={auth} component={<Customer />}/>} />
                     <Route path="wallets" element={<PrivateRoute auth={auth} component={<Wallet />}/>} />

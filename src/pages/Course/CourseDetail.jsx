@@ -57,8 +57,8 @@ const CourseDetail = () => {
          }
       })
    }
-   const addLession = (id) => {
-      navigate('/course/lession/new')
+   const addLession = () => {
+      navigate('/course/lession/new/' + id)
    }
    if (loading) {
       return <Loading />

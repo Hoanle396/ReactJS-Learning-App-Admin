@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2';
 import axioscf from '../../axios.cf';
 import Loading from '../../components/Loadding';
+import { Button, Card, TextField } from '@mui/material';
 
 const Gitf = () => {
    const [data, setData] = useState([])
@@ -106,7 +107,7 @@ const Gitf = () => {
          <div className="container mt-5 d-flex">
             <div className="row d-flex align-center justify-content-center">
                <div className="col-md-6">
-                  <div className="card card-outline card-primary">
+                  <Card>
                      <div className="card-header">
                         <h3 className="card-title">Add Voucher</h3>
                      </div>
@@ -114,26 +115,24 @@ const Gitf = () => {
                         <div className="col-md-12">
                            <div className="mb-3 ">
                               <label for="gift" className="form-label">Gift Code</label>
-                              <input type="text" className="form-control rounded h-100" value={code} onChange={(e) => setCode(e.target.value)} placeholder="Gift Code" id="gift" />
+                              <TextField value={code} onChange={(e) => setCode(e.target.value)} placeholder="Gift Code" id="gift" />
                            </div>
                            <div className="mb-3 ">
                               <label for="percent" className="form-label">Percent</label>
-                              <input type="number" value={percent} onChange={(e) => setPercent(e.target.value)} className="form-control rounded h-100" id="percent" />
+                              <TextField value={percent} onChange={(e) => setPercent(e.target.value)} id="percent" />
                            </div>
                            <div className="mb-3 ">
                               <label for="from" className="form-label">From day</label>
-                              <input type="date" value={from} onChange={(e) => setFrom(e.target.value)} className="form-control rounded h-100" id="from" />
+                              <TextField type="date" value={from} onChange={(e) => setFrom(e.target.value)} className="form-control rounded h-100" id="from" />
                            </div>
                            <div className="mb-3">
                               <label for="to" className="form-label">To day</label>
-                              <input type="date" value={to} onChange={(e) => setTo(e.target.value)} className="form-control rounded h-100" id="to" />
+                              <TextField type="date" value={to} onChange={(e) => setTo(e.target.value)} className="form-control rounded h-100" id="to" />
                            </div>
                         </div>
+                        <Button type="button" variant='contained' onClick={handleSubmit} >Add Now</Button>
                      </div>
-                     <div className="card-footer">
-                        <button type="button" onClick={handleSubmit} className="btn btn-primary rounded-pill">Add Now</button>
-                     </div>
-                  </div>
+                  </Card>
                </div>
             </div>
 
@@ -143,11 +142,6 @@ const Gitf = () => {
                <div className="card card-outline card-primary">
                   <div className="card-header">
                      <h3 className="card-title">Recharge Pending</h3>
-                     <div className="card-tools">
-                        <button type="button" className="btn btn-tool" data-card-widget="collapse"><i
-                           className="fas fa-minus"></i>
-                        </button>
-                     </div>
                   </div>
                   <div className="card-body">
                      <div className="table-responsive">

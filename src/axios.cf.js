@@ -1,6 +1,6 @@
 import * as axios from "axios";
 var axioscf = axios.create({
-  baseURL: 'http://192.168.1.19:3000/api',
+  baseURL: 'http://localhost:3000/api',
 });
 axioscf.interceptors.request.use(
    config => {
