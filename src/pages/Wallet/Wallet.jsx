@@ -36,6 +36,10 @@ const Wallet = () => {
                      'Money has been added.',
                      'success'
                   )
+                  axioscf.get('/wallet')
+                     .then((response) => {
+                        setData(response.data)
+                     })
                })
                .catch((err) => {
                   console.log(err)
